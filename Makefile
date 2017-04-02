@@ -1,2 +1,2 @@
 all:
-	cc bluetooth.c main.c -o bluetooth
+	cc -g bluetooth.c controller.c devices.c main.c -o bluetooth

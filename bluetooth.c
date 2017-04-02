@@ -58,7 +58,8 @@ int bluetooth_send(struct bluetooth_connection *con, const char *str)
 
 int bluetooth_read(struct bluetooth_connection *con, char *buffer, size_t size)
 {
-    int total, count = 0;
+    int total = 0;
+    int count = 0;
 
     // Keep reading until a timeout
     while ((count = read(con->fd, buffer + total, size)) > 0) {
